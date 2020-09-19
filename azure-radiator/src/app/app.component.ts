@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+import { AzureProjectService } from './modules/services/shared/azure-project-service/azure-project.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'azure-radiator';
+
+  constructor(private service: AzureProjectService) {
+  }
 }
