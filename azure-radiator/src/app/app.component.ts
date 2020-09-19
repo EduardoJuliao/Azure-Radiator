@@ -1,3 +1,4 @@
+import { MessageService } from './shared/services/message.service';
 
 import { Component } from '@angular/core';
 import { AzureProjectService } from './modules/services/shared/azure-project-service/azure-project.service';
@@ -10,6 +11,8 @@ import { AzureProjectService } from './modules/services/shared/azure-project-ser
 export class AppComponent {
   title = 'azure-radiator';
 
-  constructor(private service: AzureProjectService) {
+  constructor(private service: AzureProjectService,
+    private messaging: MessageService) {
+    this.messaging.success('lol');
   }
 }

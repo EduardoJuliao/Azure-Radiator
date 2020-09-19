@@ -15,16 +15,18 @@ export class HttpService {
 
   constructor(private client: HttpClient) { }
 
+  private getUrl(action: string): string {
+    return `${config.BaseAddress}/${config.Organization}/_apis/${action}?api-version=6.0`
+  };
+
   public getMany<T>(action: string): Observable<T[]> {
-    var url = config.BaseAddress + '/' + config.Organization + '/_apis/' + action + '?api-version=6.0';
-    return this.client.get(url, { headers: this.headers })
+    return this.client.get(this.getUrl(action), { headers: this.headers })
       .pipe(
         map((data: any) => data.value.map((item: T) => item))
       ) as Observable<T[]>;
   }
-}
 
-interface RestModel<T> {
-  count: number;
-  value: Record<number, T>[];
+  public get<T>(action: string): Observable<T> {
+    return this.client.get(this.getUrl(action), { headers: this.headers }) as Observable<T>;
+  }
 }

@@ -4,7 +4,7 @@ import { AzureProjectService } from './shared/azure-project-service/azure-projec
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpService } from './shared/http-service.service';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const exportServices = [AzureProjectService];
 
@@ -22,7 +22,6 @@ const exportServices = [AzureProjectService];
   ],
   imports: [
     CommonModule,
-    HttpClientJsonpModule,
     HttpClientModule
   ]
 })

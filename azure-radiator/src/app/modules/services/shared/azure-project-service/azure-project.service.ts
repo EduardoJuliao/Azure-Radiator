@@ -10,11 +10,13 @@ import { HttpService } from '../http-service.service';
 })
 export class AzureProjectService {
 
-  constructor(private client: HttpService) {
-
-  }
+  constructor(private client: HttpService) { }
 
   public fetchProjects(): Observable<ProjectModel[]> {
     return this.client.getMany<ProjectModel>('projects');
+  }
+
+  public fetchProject(projectId: string): Observable<ProjectModel> {
+    return this.client.get('projects/' + projectId)
   }
 }
