@@ -9,6 +9,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Ng2IziToastModule } from 'ng2-izitoast';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CardComponent } from './shared/components/card/card.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
@@ -16,7 +17,8 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
