@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.container > app-card {
+  flex-grow: 1;
+  min-width: 25%;
+}

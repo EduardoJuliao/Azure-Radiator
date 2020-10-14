@@ -1,6 +1,9 @@
 <div class="card">
-    <div class="container">
-        <h4><b>{{title}}</b></h4>
-        <p>{{text}}</p>
-      </div>
+  <div class="color-stripe" [ngClass]="cardType"></div>
+  <div class="container">
+    <h4>
+      <b>{{ title }}</b>
+    </h4>
+    <p>{{ text }}</p>
+  </div>
 </div>

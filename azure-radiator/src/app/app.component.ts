@@ -11,8 +11,6 @@ import { AzureProjectService } from './modules/services/shared/azure-project-ser
 export class AppComponent {
   title = 'azure-radiator';
 
-  constructor(private service: AzureProjectService,
-    private messaging: MessageService) {
-    this.messaging.success('lol');
+  constructor() {
   }
 }

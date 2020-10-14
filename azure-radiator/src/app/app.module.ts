@@ -10,6 +10,7 @@ import { Ng2IziToastModule } from 'ng2-izitoast';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CardComponent } from './shared/components/card/card.component';
+import { ProjectsModule } from './modules/projects/projects.module';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
@@ -17,14 +18,14 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     Ng2IziToastModule,
+    ProjectsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

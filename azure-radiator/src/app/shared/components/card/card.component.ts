@@ -13,6 +13,9 @@ export class CardComponent implements OnInit {
   @Input('text')
   text: string;
 
+  @Input('type')
+  cardType: string;
+
   constructor() { }
 
   ngOnInit() {

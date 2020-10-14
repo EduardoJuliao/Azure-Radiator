@@ -1,6 +1,10 @@
+@import "../../../../assets/scss/type-color.scss";
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  display: flex;
+  border-radius: 10px;
 }
 
 .card:hover {
@@ -9,4 +13,38 @@
 
 .container {
   padding: 2px 16px;
+}
+.container > p {
+  overflow-y: auto;
+  height: 5vh;
+}
+
+.color-stripe {
+  width: 10px;
+  display: inline-block;
+  border-radius: 10px 0 0 10px;
+}
+
+.project {
+  background-color: $project;
+}
+
+.pull-request {
+  background-color: $pull-request;
+}
+
+.completed-pull-request {
+  background-color: $completed-pull-request;
+}
+
+.abandoned-pull-request {
+  background-color: $abandoned-pull-request;
+}
+
+.task {
+  background-color: $task;
+}
+
+.bug {
+  background-color: $bug;
 }
