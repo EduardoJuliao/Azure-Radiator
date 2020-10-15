@@ -2,9 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   
+  
+}
+
+app-card{
+    margin: 10px;
 }
 
 .container > app-card {
   flex-grow: 1;
-  min-width: 25%;
+  width: 30%;
+  
 }

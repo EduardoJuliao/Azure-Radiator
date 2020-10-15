@@ -2,13 +2,17 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(222, 222, 222);;
   transition: 0.3s;
   display: flex;
   border-radius: 10px;
+  transition: all .2s ease-in-out;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.005);
 }
 
 .container {

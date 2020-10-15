@@ -8,7 +8,8 @@ import { ProjectModel } from "src/app/modules/services/shared/models/project.mod
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
 })
-export class ProjectsComponent implements OnInit {3
+export class ProjectsComponent implements OnInit {
+  3;
 
   projects: ProjectModel[];
 
@@ -18,5 +19,9 @@ export class ProjectsComponent implements OnInit {3
     this.service.fetchProjects().subscribe((data: ProjectModel[]) => {
       this.projects = data;
     });
+  }
+
+  openProject(projectId: string): void {
+    
   }
 }
